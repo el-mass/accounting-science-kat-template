@@ -1,0 +1,243 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #e61a27; /* Coca-Cola Red */
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Homepage Styles */
+.homepage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.welcome {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.welcome h2 {
+    color: #e61a27;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bottles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.bottle-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.bottle-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.bottle-card a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.bottle-card h3 {
+    margin-top: 1rem;
+    color: #e61a27;
+    font-size: 1.5rem;
+}
+
+.bottle-img {
+    height: 200px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.bottle-card:hover .bottle-img {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Individual Page Styles */
+.bottle-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.bottle-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.bottle-image {
+    flex: 0 0 200px;
+    margin-right: 2rem;
+}
+
+.bottle-image img {
+    height: 300px;
+    width: auto;
+}
+
+.bottle-info {
+    flex: 1;
+}
+
+.bottle-info h2 {
+    color: #e61a27;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    border-bottom: 2px solid #e61a27;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.bottle-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.bottle-content h3 {
+    color: #e61a27;
+    margin: 1.5rem 0 1rem;
+    font-size: 1.8rem;
+}
+
+.bottle-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: #e61a27;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #c41620;
+}
+
+/* Navigation for Individual Pages */
+.page-nav {
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.page-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.page-nav li {
+    margin: 0 1rem;
+}
+
+.page-nav a {
+    color: #e61a27;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.page-nav a:hover {
+    color: #c41620;
+    border-bottom: 2px solid #e61a27;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #e61a27;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Animations */
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bottles-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .bottle-img {
+        height: 150px;
+    }
+    
+    .bottle-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .bottle-image {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    .page-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .page-nav li {
+        margin: 0.5rem 0;
+    }
+}
